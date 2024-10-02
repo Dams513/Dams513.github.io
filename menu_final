@@ -1,0 +1,1386 @@
+Algoritmo menu_inv
+	definir n1 Como Entero
+	Escribir "MENÚ DE PROBLEMAS"
+	Escribir "1. Mayor de tres números"
+	Escribir "2. Edad mínima para votar"
+	Escribir "3. Verificar si el primer número es múltiplo del segundo"
+	Escribir "4. Número positivo, negativo o cero"
+	Escribir "5. Año bisiesto"
+	Escribir "6. Determinar signo zodiacal"
+	Escribir "7. Verificar quincena del mes"
+	Escribir "8. Día de la semana"
+	Escribir "9. Calculadora de precio con descuento"
+	Escribir "10. Calculadora de sueldo con aumento"
+	Escribir "11. Calculadora de compra con múltiples artículos"
+	Escribir "12. Calculadora de impuestos sobre el salario"
+	Escribir "13. Bono de antigüedad"
+	Escribir "14. Costo de envío"
+	Escribir "15. Compras mensuales con descuento"
+	Escribir "16. Descuentos por volumen de compra"
+	Escribir "17. Costo total por horas de servicio"
+	Escribir "18. Presupuesto para banquetes"
+	Escribir "19. Ganancia obtenida por venta de uvas"
+	Escribir "20. Costo de viaje escolar por alumno"
+	Escribir "21. Costo de viaje en autobús por persona"
+	Escribir "22. Verificar si un carácter es letra del alfabeto"
+	Escribir "23. Verificar si un carácter es vocal, dígito o símbolo"
+	Escribir "24. Comparar dos caracteres"
+	Escribir "25. Comparar dos frases"
+	Escribir "0. Salir"
+	Escribir "Seleccione una opción:"
+	Leer n1
+	Segun n1 Hacer
+		1:
+			Borrar Pantalla ;num1
+		2:
+			Borrar Pantalla ;num2
+		3:
+			Borrar Pantalla ;num3
+		4:
+			Borrar Pantalla ;num4
+		5:
+			Borrar Pantalla ;num5
+		6:
+			Borrar Pantalla ;num6
+		7:
+			Borrar Pantalla ;num7
+		8:
+			Borrar Pantalla ;num8
+		9:
+			Borrar Pantalla ;num9
+		10:
+			Borrar Pantalla ;num10
+		11:
+			Borrar Pantalla ;num11
+		12:
+			Borrar Pantalla ;num12
+		13:
+			Borrar Pantalla ;num13
+		14:
+			Borrar Pantalla ;num14
+		15:
+			Borrar Pantalla ;num15
+		16:
+			Borrar Pantalla ;num16
+		17:
+			Borrar Pantalla ;num17
+		18:
+			Borrar Pantalla ;num18
+		19:
+			Borrar Pantalla ;num19
+		20:
+			Borrar Pantalla ;num20
+		21:
+			Borrar Pantalla ;num21
+		22:
+			Borrar Pantalla ;num22
+		23:
+			Borrar Pantalla ;num23
+		24:
+			Borrar Pantalla ;num24
+		25:
+			Borrar Pantalla ;num25
+		0:
+			Escribir "Saliendo del menú..."
+			finpro
+		FinSegun
+FinAlgoritmo
+
+Funcion num1
+	Definir n1,n2,n3,n4,n5 Como Real
+	Escribir "Ingrese cinco números:"
+	Leer n1, n2, n3, n4, n5
+	Si n1>n2 Entonces
+		Borrar Pantalla
+		Escribir n1 " Es el mayor de los 5."
+		f1
+	SiNo
+		si n2>n3 Entonces
+			Borrar Pantalla
+			Escribir n2 " Es el mayor de los 5."
+			f1
+		SiNo
+			si n3>n4 Entonces
+				Borrar Pantalla
+				Escribir n3 " Es el mayor de los 5."
+				f1
+			SiNo
+				si n4>n5 Entonces
+					Borrar Pantalla
+					Escribir n4 " Es el mayor de los 5."
+					f1
+				SiNo
+					Borrar Pantalla
+					Escribir n5 " Es el mayor de los 5."
+					f1
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num2
+	Definir n1 Como Real
+	Escribir "Ingrese su edad." ;Leer n1
+	si n1>=18 Entonces
+		Borrar Pantalla
+		Escribir "Usted tiene edad para votar."
+		f2
+	SiNo
+		Borrar Pantalla
+		Escribir "Usted no tiene la edad suficiente para votar."
+		f2
+	FinSi
+FinFuncion
+
+Funcion  num3
+	Definir n1,n2,n3,n4 Como Real
+	Escribir "Ingrese un numero para mostrar su multiplo." ;Leer n1
+	Escribir "Ingrese el numero de multiplos que decea que se muestre." ;Leer n4
+	n3=1
+	si n1 mod 2 =0 Entonces
+		n2=0
+		Borrar Pantalla
+		Escribir n1 " Es multiplo de 2 "
+		escribir "Los demas multiplos de 2 son"
+		Repetir
+			n2=n2+2 ;n3=n3+1
+			Escribir n2
+		Hasta Que n3=n4
+		si n3=n4 Entonces
+			f3
+		FinSi
+	SiNo
+		si n1 mod 3=0 Entonces
+			n2=0
+			Borrar Pantalla
+			Escribir n1 " Es multiplo de 3 "
+			escribir "Los demas multiplos de 3 son"
+			Repetir
+				n2=n2+3 ;n3=n3+1
+				Escribir n2
+			Hasta Que n3=n4
+			si n3=n4 Entonces
+				f3
+			FinSi
+		SiNo
+			si n1 mod 7=0 Entonces
+				n2=0
+				Borrar Pantalla
+				Escribir n1 " Es multiplo de 7"  
+				escribir "Los demas multiplos de 7 son"
+				Repetir
+					n2=n2+7 ;n3=n3+1
+					Escribir n2
+				Hasta Que n3=n4
+				si n3=n4 Entonces
+					f3
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num4
+	Definir n1 Como Real
+	Escribir "Ingrese un numero para saber si es negativo, positivo o cero" ;Leer n1
+	si n1>0 Entonces
+		Borrar Pantalla
+		Escribir n1 " Es un numero positivo."
+		f4
+	SiNo
+		si n1<0 Entonces
+			Borrar Pantalla
+			Escribir n1 " Es un numero negativo."
+			f4
+		SiNo
+			Borrar Pantalla
+			Escribir "Su numero es 0."
+			f4
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num5
+	Definir n1 Como Real
+	Escribir "ingrese el año para saber si es una año bisiesto." ;Leer n1
+	si n1>=1000 y n1<=3000 Entonces
+		si n1 mod 4=0 Entonces
+			Borrar Pantalla
+			Escribir n1 " Es año bisiesto"
+			f5
+		SiNo
+			si n1 mod 4=1 Entonces
+				Borrar Pantalla
+				Escribir n1 " En tres años sera año biisiesto."
+				f5
+			SiNo
+				si n1 mod 4=2 Entonces
+					Borrar Pantalla
+					Escribir n1 " En dos años sera año biisiesto."
+					f5
+				SiNo
+					si n1 mod 4=3 Entonces
+						Borrar Pantalla
+						Escribir n1 " En un año sera año biisiesto."
+						f5
+					FinSi
+				FinSi
+			finsi
+	    FinSi
+	SiNo
+		Borrar Pantalla
+		Escribir "Ingrese un año valido "
+		num5
+	FinSi
+FinFuncion
+
+Funcion num6
+    Definir dia, mes Como Entero
+	Escribir "Ingrese su día de nacimiento:" ;Leer dia
+	Escribir "Ingrese su mes de nacimiento (1-12):" ;Leer mes
+	Segun mes Hacer
+		1:  // Enero
+			Si dia >= 20 Entonces
+				Borrar Pantalla
+				Escribir "Acuario"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Capricornio"
+				f6
+			FinSi
+		2:  // Febrero
+			Si dia >= 19 Entonces
+				Borrar Pantalla
+				Escribir "Piscis"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Acuario"
+				f6
+			FinSi
+		3:  // Marzo
+			Si dia >= 21 Entonces
+				Borrar Pantalla
+				Escribir "Aries"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Piscis"
+				f6
+			FinSi
+		4:  // Abril
+			Si dia >= 20 Entonces
+				Borrar Pantalla
+				Escribir "Tauro"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Aries"
+				f6
+			FinSi
+		5:  // Mayo
+			Si dia >= 21 Entonces
+				Borrar Pantalla
+				Escribir "Géminis"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Tauro"
+				f6
+			FinSi
+		6:  // Junio
+			Si dia >= 21 Entonces
+				Borrar Pantalla
+				Escribir "Cáncer"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Géminis"
+				f6
+			FinSi
+		7:  // Julio
+			Si dia >= 23 Entonces
+				Borrar Pantalla
+				Escribir "Leo"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Cáncer"
+				f6
+			FinSi
+		8:  // Agosto
+			Si dia >= 23 Entonces
+				Borrar Pantalla
+				Escribir "Virgo"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Leo"
+				f6
+			FinSi
+		9:  // Septiembre
+			Si dia >= 23 Entonces
+				Borrar Pantalla
+				Escribir "Libra"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Virgo"
+				f6
+			FinSi
+		10:  // Octubre
+			Si dia >= 23 Entonces
+				Borrar Pantalla
+				Escribir "Escorpio"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Libra"
+				f6
+			FinSi
+		11:  // Noviembre
+			Si dia >= 22 Entonces
+				Borrar Pantalla
+				Escribir "Sagitario"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Escorpio"
+				f6
+			FinSi
+		12:  // Diciembre
+			Si dia >= 22 Entonces
+				Borrar Pantalla
+				Escribir "Capricornio"
+				f6
+			Sino
+				Borrar Pantalla
+				Escribir "Sagitario"
+				f6
+			FinSi
+		De Otro Modo:
+			Borrar Pantalla
+			Escribir "Mes no válido."
+			num6
+	FinSegun
+FinFuncion
+
+Funcion num7
+	Definir dia Como Entero
+	Escribir "Ingrese el día del mes (1-31):" ;Leer n1
+	Si n1>=1 Y n1<=15 Entonces
+		Borrar Pantalla
+		Escribir "Pertenece a la primera quincena."
+		f7
+	Sino
+		Si dia >= 16 Y dia <= 31 Entonces
+			Borrar Pantalla
+			Escribir "Pertenece a la segunda quincena."
+			f7
+		Sino
+			Borrar Pantalla
+			Escribir "Día no válido."
+			f7
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num8
+	Definir n1 Como Entero
+	Escribir "Ingrese un número del 1 al 7 (donde 1 es Domingo y 7 es Sábado)." ;Leer n1
+	Segun n1 Hacer
+		1: Borrar Pantalla
+			Escribir "Domingo"
+			f8
+		2: Borrar Pantalla
+			Escribir "Lunes"
+			f8
+		3: Borrar Pantalla
+			Escribir "Martes"
+			f8
+		4: Borrar Pantalla
+			Escribir "Miércoles"
+			f8
+		5: Borrar Pantalla
+			Escribir "Jueves"
+			f8
+		6: Borrar Pantalla
+			Escribir "Viernes"
+			f8
+		7: Borrar Pantalla
+			Escribir "Sábado"
+			f8
+		De Otro Modo:
+			Borrar Pantalla
+			Escribir "Número no válido."
+			num8
+	FinSegun
+FinFuncion
+
+Funcion num9 
+	Definir precio,desc,iva,precioF Como Real
+	Escribir "Ingrese el precio del artículo." ;Leer precio
+	Escribir "Ingrese el porcentaje de descuento." ;Leer desc
+	desc=precio*(desc/100)
+	iva = (precio-desc) * 0.15
+	precioF=(precio-desc) + iva
+	Borrar Pantalla
+	Escribir "El precio final con descuento e IVA es " precioFinal
+	f9
+FinFuncion
+
+Funcion num10
+	Definir s,a,nS Como Real
+	Escribir "Ingrese su salario actual." ;Leer s
+	Escribir "Ingrese el porcentaje de aumento." ;Leer a
+	nS=s+(s*(a/100))
+	Borrar Pantalla
+	Escribir "El nuevo salario después del aumento es. " nS
+	f10
+FinFuncion
+
+Funcion num11
+	Definir cantidad,precio,total,desc Como Real
+	Definir articulos, i Como Entero
+	Escribir "Ingrese el número de artículos" ;Leer articulos
+	total=0
+	Para i=1 Hasta articulos Con Paso 1 Hacer
+		Escribir "Ingrese el precio del artículo " i ;Leer precio
+		Escribir "Ingrese la cantidad del artículo " i ;Leer cantidad
+		total=total+(precio*cantidad)
+	FinPara
+	Si total>100 Entonces
+		desc=total*0.10
+		total=total-desc
+	FinSi
+	Borrar Pantalla
+	Escribir "El total de la compra es " total " $"
+	f11
+FinFuncion
+
+Funcion num12
+	Definir s,imp Como Real
+	Escribir "Ingrese su salario anual" ;Leer s
+	Si s<=10000 Entonces
+		imp=s*0.05
+	Sino
+		Si s<=20000 Entonces
+			imp=s*0.10
+		Sino
+			imp=s*0.15
+		FinSi
+	FinSi
+	Borrar Pantalla
+	Escribir "El impuesto a pagar es " imp
+	f12
+FinFuncion
+
+Funcion num13
+	Definir antid,sala,b Como Real
+	Escribir "Ingrese cuántos años ha trabajado en la empresa:" ;Leer antid
+	Escribir "Ingrese su salario actual:" ;Leer sala 
+	Si antid>5 Entonces
+		b=sala*0.05
+		Borrar Pantalla
+		Escribir "El bono de antigüedad es " b
+		f13
+	Sino
+		Borrar Pantalla
+		Escribir "No tiene derecho a bono de antigüedad."
+		f13
+	FinSi
+FinFuncion
+
+funcion num14
+	Definir distancia, costo Como Real
+	Escribir "Ingrese la distancia del envío en kilómetros:" ;Leer distancia
+	Si distancia<50 Entonces
+		costo=10
+	Sino
+		costo=20
+	FinSi
+	Borrar Pantalla
+	Escribir "El costo del envío es " costo
+	f14
+FinFuncion
+
+Funcion num15
+	Definir tC,descu,iva,totalF Como Real
+	Escribir "Ingrese el total de sus compras mensuales:" ;Leer tC
+	Si tC>500 Entonces
+		descu=tC*0.20
+		tC=tC-descu
+	FinSi
+	iva=tC*0.15
+	totalF=tC+iva
+	Borrar Pantalla
+	Escribir "El total final con IVA es " totalF
+	f15
+FinFuncion
+
+Funcion num16
+	Definir cantidad,preU,total,descu,iva Como Real
+	Escribir "Ingrese la cantidad de unidades a comprar:" ;Leer cantidad
+	Escribir "Ingrese el precio unitario:" ;Leer preU
+	total=cantidad*preU
+	Si cantidad>=20 Y cantidad<=40 Entonces
+		descu=total*0.15
+	Sino
+		Si cantidad>=41 Y cantidad<=90 Entonces
+			descu=total*0.20
+		Sino
+			Si cantidad>90 Entonces
+				descu=total*0.25
+			FinSi
+		FinSi
+	FinSi
+	total=total-descu
+	iva=total*0.15
+	total=total+iva
+	Borrar Pantalla
+	Escribir "El total con descuento e IVA es " total
+	f16
+FinFuncion
+
+Funcion num17
+	Definir horas,costob,costo,descu Como Real
+	Escribir "Ingrese el número de horas de servicio" ;Leer horas
+	Escribir "Ingrese el costo base de las hora de servicio" ;leer costob
+	costo=horas*costob  
+	Si horas>10 Entonces
+		descu=costo*0.20
+		costo=costo-descu
+	FinSi
+	Borrar Pantalla
+	Escribir "El costo total es " costo
+	f17
+FinFuncion
+
+Funcion num18
+	Definir personas,costoPersona,total,iva Como Real
+	Escribir "Ingrese el número de personas" ;Leer personas
+	Si personas > 300 Entonces
+		costoPersona = 75
+	Sino
+		Si personas>200 Entonces
+			costoPersona=85
+		Sino
+			costoPersona=95
+		FinSi
+	FinSi
+	total=personas*costoPersona
+	iva=total*0.15
+	total=total+iva
+	Borrar Pantalla
+	Escribir "El presupuesto total con IVA es " total
+	f18
+FinFuncion
+
+Funcion num19
+	Definir tamaño,precioi,ganancia,iva Como Real
+	Definir tipo Como Caracter
+	Escribir "Ingrese el tipo de uva (A o B)" ;Leer tipo
+	Escribir "Ingrese el tamaño de la uva (1 o 2):";Leer tamaño
+	Escribir "Ingrese el precio inicial por kilo:" ;Leer precioi
+	Si tipo="A" Entonces
+		Si tamano=1 Entonces
+			ganancia=precioi+20
+		Sino
+			ganancia=precioi+30
+		FinSi
+	Sino
+		Si tamano=1 Entonces
+			ganancia=precioi-30
+		Sino
+			ganancia=precioi-50
+		FinSi
+	FinSi
+	iva=ganancia*0.15
+	ganancia=ganancia+iva
+	Borrar Pantalla
+	Escribir "La ganancia total es " ganancia
+	f19
+FinFuncion
+
+Funcion num20
+	Definir alumnos,costo,total,descu Como Real
+	Escribir "Ingrese el número de alumnos:"
+	Leer alumnos
+	Si alumnos>=200 Entonces
+		costo=20
+	Sino
+		Si alumnos>=100 Entonces
+			costo=30
+		Sino
+			Si alumnos>=50 Entonces
+				costo=40
+			Sino
+				costo=50
+			FinSi
+		FinSi
+	FinSi
+	total=alumnos*costo
+	Si alumnos<20 Entonces
+		total=2000
+	FinSi
+	descu=total*0.10
+	total=total-descu
+	Borrar Pantalla
+	Escribir "El costo total del viaje es " total
+	f20
+FinFuncion
+
+Funcion num21
+	Definir tipobus Como Caracter
+	Definir personas,km,costo,costoTotal,iva Como Real
+	Escribir "Ingrese el número de personas:" ;Leer personas
+	Si personas<20 Entonces
+		Escribir "El mínimo es 20 personas" ;Borrar Pantalla
+		num21
+	FinSi
+	Escribir "Ingrese la cantidad de kilómetros recorridos" ;Leer km
+	Escribir "Ingrese el tipo de autobús (A, B o C):" ;Leer tipoBus
+	Segun tipoBus Hacer
+		"A":
+			costo=km*2.0
+		"B":
+			costo=km*2.5
+		"C":
+			costo=km*3.0
+	    De Otro Modo:
+		    Escribir "Tipo de autobús no válido." ;Borrar Pantalla
+			num21
+	FinSegun
+    costoTotal=personas*costo
+    iva=costoTotal*0.15
+    costoTotal=costoTotal+iva
+	Borrar Pantalla
+    Escribir "El costo total con IVA es " costoTotal
+    Escribir "El costo por persona es " costoTotal/personas 
+	f21
+FinFuncion
+
+Funcion num22
+	Definir l1 Como Caracter
+	Escribir "Ingrese un carácter" ;Leer l1
+	Si (l1>="A" Y l1<="Z") O (l1>="a" Y l1<="z") Entonces
+		Borrar Pantalla
+		Escribir l1 " es una letra del alfabeto."
+		f22
+	Sino
+		Borrar Pantalla
+		Escribir l1 " no es una letra del alfabeto."
+		f22
+	FinSi
+FinFuncion
+
+Funcion num23
+	Definir l1 Como Caracter
+	Escribir "Ingrese un carácter."
+	Leer l1
+	Si l1="a" O l1="e" O l1="i" O l1="o" O l1="u" O l1="A" O l1="E" O l1="I" O l1="O" O l1="U" Entonces
+		Borrar Pantalla
+		Escribir l1 " es una vocal."
+		f23
+	Sino
+		Si l1>="0" Y l1<="9" Entonces
+			Borrar Pantalla
+			Escribir l1 " es un dígito."
+			f23
+		Sino
+			Si l1="." O l1=";" O l1=":" Entonces
+				Borrar Pantalla
+				Escribir l1 " es un símbolo de puntuación."
+				f23
+			Sino
+				Si l1=" " Entonces
+					Borrar Pantalla
+					Escribir "Es un espacio en blanco."
+					f23
+				Sino
+					si l1>=A Y l1<=Z Entonces
+						Borrar Pantalla
+						Escribir l1 " Es una letra."
+						f23
+					SiNo
+						Borrar Pantalla
+						Escribir l1 " es otro tipo de carácter."
+						f23
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num24
+	Definir caracter1,caracter2 Como Caracter
+	Escribir "Ingrese el primer carácter:" ;Leer caracter1
+	Escribir "Ingrese el segundo carácter:" ;Leer caracter2
+	Si caracter1=caracter2 Entonces
+		Escribir "Los dos caracteres son iguales."
+		f24
+	Sino
+		Si caracter1<caracter2 Entonces
+			Borrar Pantalla
+			Escribir caracter1 " es menor que " caracter2
+			f24
+		Sino
+			Borrar Pantalla
+			Escribir caracter1 " es mayor que " caracter2
+			f24
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion num25
+	Definir fr1,fr2 Como Cadena
+	Escribir "Ingrese la primera frase:" ;Leer fr1
+	Escribir "Ingrese la segunda frase:" ;Leer fr2
+	Si fr1=fr2 Entonces
+		Borrar Pantalla
+		Escribir "Las dos frases son iguales."
+		f25
+	Sino
+		Si fr1<fr2 Entonces
+			Borrar Pantalla
+			Escribir fr1 " es menor que " fr2
+			f25
+		Sino
+			Borrar Pantalla
+			Escribir fr1 " es mayor que " fr2
+			f25
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion finpro
+FinAlgoritmo
+FinFuncion
+
+Funcion f1
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num1
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f1
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f2
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num2
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f2
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f3
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num3
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f3
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f4
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num4
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f4
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f5
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num5
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f5
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f6
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num6
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f6
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f7
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num7
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f7
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f8
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num8
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f8
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f9
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num9
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f9
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f10
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num10
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f10
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f11
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num11
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f11
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f12
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num12
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f12
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f13
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num13
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f13
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f14
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num14
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f14
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f15
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num15
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f15
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f16
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num16
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f16
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f17
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num17
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f17
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f18
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num18
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f18
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f19
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num19
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f19
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f20
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num20
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f20
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f21
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num21
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f21
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f22
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num22
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f22
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f23
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num23
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f23
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f24
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num24
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f24
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
+
+Funcion f25
+	Definir n1 Como Entero
+	Escribir " "
+	Escribir "1, Volver a realizar el ejercicio."
+	Escribir "2. volver al menu."
+	Leer n1
+	Repetir
+		si n1>=1 o n1<=2 Entonces
+			si n1=1 Entonces
+				Borrar Pantalla
+				num25
+			SiNo
+				si n1=2 Entonces
+					Borrar Pantalla
+					menu_inv
+				SiNo
+					escribir "ingrese una opcion validad." ; Esperar Tecla
+					Borrar Pantalla
+					f25
+				FinSi
+			FinSi
+		FinSi
+	Hasta Que n1>=1 o n1<=2
+FinFuncion
